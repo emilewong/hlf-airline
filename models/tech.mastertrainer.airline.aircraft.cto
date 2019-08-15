@@ -13,7 +13,29 @@
  */
 
 /**
- * Write your model definitions here
+ * This is the model of aircraft
  */
 
 namespace tech.mastertrainer.airline.aircraft
+
+/** Aircraft */
+
+asset Aircraft identified by aircraftId {
+  o String    aircraftId
+
+  //Ownership
+  o Ownership ownershipType default="LEASED"
+
+  // Number of seats per class
+  o Integer   firstClassSeats
+  o Integer   businessClassSeats
+  o Integer   economyClassSeats
+
+  o String    nickName optional 
+
+}
+
+enum Ownership {
+  o LEASED
+  o OWNED
+}
