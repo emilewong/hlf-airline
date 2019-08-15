@@ -18,12 +18,15 @@
 
 namespace tech.mastertrainer.airline.flight
 
+import  tech.mastertrainer.airline.aircraft.Aircraft
+
 /** Flight */
 
 asset Flight identified by flightNumber {
-  o String    flightNumber
-  o Route     route
-  o String[]  aliasFlightNumber
+  o   String    flightNumber
+  o   Route     route
+  o   String[]  aliasFlightNumber
+  --> Aircraft  aircraft
 
 }
 
